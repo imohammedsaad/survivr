@@ -131,7 +131,7 @@ disaster_sizes = {
 
 # Display the content based on the selected page
 if page == "Home":
-    st.markdown("<h1 style='text-align: center;'>AlertFlow</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Survivr</h1>", unsafe_allow_html=True)
     st.markdown("<h4 style='text-align: center;'>Real-Time Disaster Information Aggregation Software</h4>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center;'>This is a web application to monitor and visualize disasters in real-time using news data.</p>", unsafe_allow_html=True)
 
@@ -268,13 +268,13 @@ elif page == "Book A Training":
             booking_form = default_booking_form.copy()
 elif page == "Info":
     st.markdown("<h1 style='text-align: center;'>Project Information</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center;'>Welcome to the AlertFlow project. Below is some information about this project:</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'>Welcome to the project Survivr. Below is some information about this project:</p>", unsafe_allow_html=True)
 
     st.markdown("""
-    Project Name: AlertFlow
+    Project Name: Survivr
     
     \n Description:
-    AlertFlow is a web application designed to monitor and visualize real-time disaster information using news data.The application aggregates news articles related to natural disasters, filters them based on user preferences, and visualizes the information on a map.
+    Survivr is a web application designed to monitor and visualize real-time disaster information using news data.The application aggregates news articles related to natural disasters, filters them based on user preferences, and visualizes the information on a map.
     """)
     col1, col2 = st.columns([1, 3])
 
@@ -310,7 +310,7 @@ elif page == "Info":
         
 elif page == "About Us":
     st.markdown("<h1 style='text-align: center;'>About Us</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center;'>Welcome to the AlertFlow project. Below is some information about us.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'>Welcome to the Survivr project. Below is some information about us.</p>", unsafe_allow_html=True)
     
     st.markdown("""
     <h2 style='text-align: center;'>Team Details</h2>
