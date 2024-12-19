@@ -5,6 +5,7 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime
 import pytz
+from datetime import date
 
 # Define disaster types for filtering
 disaster_types = ['All', 'Flood', 'Landslide', 'Earthquake', 'Tsunami', 'Wildfire', 'Hurricane', 'Cyclone', 'Storm', 'Drought', 'Volcano']
@@ -52,10 +53,20 @@ precautions = {
         'image': 'https://cdn.britannica.com/64/248964-138-C9CF1DD3/what-are-volcanoes-lava-flows.jpg?w=800&h=450&c=crop'
     }
 }
+default_booking_form = {
+    "name": "",
+    "email": "",
+    "phone": "",
+    "organization": "NGO",
+    "training_type": "Disaster Preparedness",
+    "preferred_date": date.today(),
+    "message": ""
+}
+booking_form = default_booking_form.copy()
 
 # Add navigation options in the sidebar
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Precautions", "Info", "Insights", "About Us"])
+page = st.sidebar.radio("Go to", ["Home", "Precautions", "Info", "Insights","Book A Training", "About Us"])
 
 # Add a button to enable real-time notifications in the sidebar
 st.sidebar.header("Real-Time Notifications")
@@ -210,7 +221,51 @@ elif page == "Precautions":
             st.image(precautions[disaster_type]['image'])
         else:
             st.write("No precautions available for the selected disaster type.")
+elif page == "Education":
+    st.title("Education & Training Portal")
+    st.markdown("### Explore training opportunities and book your session today.")
 
+    # Training Options
+    st.markdown("#### Training Options")
+    col1, col2, col3 = st.columns(3)
+    col1.markdown("##### NGO Training\nConnect with NGOs for community-based disaster preparedness training.")
+    col2.markdown("##### NSS Programs\nProfessional disaster management and safety training programs.")
+    col3.markdown("##### NCC Workshops\nOfficial civil defense and emergency response workshops.")
+
+    # Booking Form
+    st.markdown("### Book a Training Session")
+    with st.form(key="booking_form"):
+        col1, col2 = st.columns(2)
+        booking_form["name"] = col1.text_input("Name", value=booking_form["name"])
+        booking_form["email"] = col2.text_input("Email", value=booking_form["email"])
+        
+        col1, col2 = st.columns(2)
+        booking_form["phone"] = col1.text_input("Phone", value=booking_form["phone"])
+        booking_form["organization"] = col2.selectbox(
+            "Organization",
+            ["NGO", "NSSS", "NCC"],
+            index=["NGO", "NSSS", "NCC"].index(booking_form["organization"])
+        )
+
+        col1, col2 = st.columns(2)
+        booking_form["training_type"] = col1.selectbox(
+            "Training Type",
+            ["Disaster Preparedness", "Emergency Response", "First Aid", "Community Resilience"],
+            index=["Disaster Preparedness", "Emergency Response", "First Aid", "Community Resilience"].index(
+                booking_form["training_type"]
+            )
+        )
+        booking_form["preferred_date"] = col2.date_input("Preferred Date", value=booking_form["preferred_date"])
+
+        booking_form["message"] = st.text_area("Additional Message", value=booking_form["message"], height=100)
+
+        submit = st.form_submit_button("Book Session")
+        if submit:
+            st.success("Thank you for booking a session! We will contact you shortly.")
+            st.write("Booking Details:")
+            st.json(booking_form)
+            # Reset form
+            booking_form = default_booking_form.copy()
 elif page == "Info":
     st.markdown("<h1 style='text-align: center;'>Project Information</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center;'>Welcome to the AlertFlow project. Below is some information about this project:</p>", unsafe_allow_html=True)
