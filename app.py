@@ -221,7 +221,7 @@ elif page == "Precautions":
             st.image(precautions[disaster_type]['image'])
         else:
             st.write("No precautions available for the selected disaster type.")
-elif page == "Education":
+elif page == "Book A Training":
     st.title("Education & Training Portal")
     st.markdown("### Explore training opportunities and book your session today.")
 
@@ -243,8 +243,8 @@ elif page == "Education":
         booking_form["phone"] = col1.text_input("Phone", value=booking_form["phone"])
         booking_form["organization"] = col2.selectbox(
             "Organization",
-            ["NGO", "NSSS", "NCC"],
-            index=["NGO", "NSSS", "NCC"].index(booking_form["organization"])
+            ["NGO", "NSS", "NCC"],
+            index=["NGO", "NSS", "NCC"].index(booking_form["organization"])
         )
 
         col1, col2 = st.columns(2)
