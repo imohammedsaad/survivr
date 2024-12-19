@@ -6,6 +6,7 @@ import plotly.express as px
 from datetime import datetime
 import pytz
 from datetime import date
+import random
 
 # Define disaster types for filtering
 disaster_types = ['All', 'Flood', 'Landslide', 'Earthquake', 'Tsunami', 'Wildfire', 'Hurricane', 'Cyclone', 'Storm', 'Drought', 'Volcano']
@@ -63,7 +64,11 @@ precautions = {
         'video': 'https://www.youtube.com/embed/UD35fHCQ95c'
     }
 }
-
+def get_forecast(location):
+    # Mock predictions for demonstration purposes
+    disasters = ["Flood", "Earthquake", "Wildfire", "Cyclone", "Storm", "Drought"]
+    probabilities = {disaster: round(random.uniform(0, 100), 2) for disaster in disasters}
+    return probabilities
 default_booking_form = {
     "name": "",
     "email": "",
@@ -77,7 +82,7 @@ booking_form = default_booking_form.copy()
 
 # Add navigation options in the sidebar
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Precautions", "Info", "Insights","Book A Training", "About Us"])
+page = st.sidebar.radio("Go to", ["Home", "Precautions", "Info", "Insights","AI Based Forecast", "Book A Training", "About Us"])
 
 # Add a button to enable real-time notifications in the sidebar
 st.sidebar.header("Real-Time Notifications")
@@ -319,7 +324,7 @@ elif page == "Info":
         - Improve filtering and search capabilities for better user experience.
         - Add user authentication and personalized features.
         """)
-        
+       
 elif page == "About Us":
     st.markdown("<h1 style='text-align: center;'>About Us</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center;'>Welcome to the Survivr project. Below is some information about us.</p>", unsafe_allow_html=True)
@@ -345,7 +350,24 @@ elif page == "About Us":
         
     </ul>
     """, unsafe_allow_html=True)
-    
+elif page == "AI Based Forecast":
+    st.markdown("<h1 style='text-align: center;'>AI-Based Disaster Forecast</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'>Enter a location below to get a forecast of potential disasters in that area.</p>", unsafe_allow_html=True)
+
+    # Input field for location
+    location = st.text_input("Enter a Location (City, State, or Country):", "")
+
+    if st.button("Get Forecast"):
+        if location.strip():
+            # Fetch forecasts (mock predictions for now)
+            predictions = get_forecast(location)
+
+            # Display the forecast results
+            st.markdown(f"### Forecast for **{location}**")
+            for disaster, probability in predictions.items():
+                st.write(f"**{disaster}:** {probability}% probability")
+        else:
+            st.warning("Please enter a valid location to get a forecast.")  
 elif page == "Insights":
     st.markdown("<h1 style='text-align: center;'>Insights</h1>", unsafe_allow_html=True)
     st.markdown("<h2 style='text-align: center;'>This section will provide insights and visualizations based on the collected data.</h2>", unsafe_allow_html=True)
