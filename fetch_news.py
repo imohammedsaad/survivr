@@ -39,8 +39,8 @@ disaster_keywords = {
 
 # Preprocess text by converting to lowercase and removing special characters
 def preprocess_text(text):
-    text = text.lower()
-    text = re.sub(r'\W+', ' ', text)
+    text = text.lower() if text else ""
+    # Add further preprocessing steps if needed
     return text
 
 # Extract possible locations using spaCy NER

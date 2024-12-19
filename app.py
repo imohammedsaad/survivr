@@ -260,12 +260,9 @@ elif page == "About Us":
     st.markdown("""
     <h2 style='text-align: center;'>Team Details</h2>
     <ul style='font-size: 30px;'>
-        <li><strong>Lakshmi Chaithanya</strong> - <em>Team Lead</em></li>
-        <li>Mohammed Saad</li>
-        <li>Prajwal R.H.</li>
-        <li>Utkarsh S. Patil</li>
-        <li>Umar Owais</li>
-        <li>Saisharan A. Patil</li>
+        <li><strong>Mohammed Saad</strong></li>
+        <li><strong>Prajwal R.H.</strong></li>
+        <li><strong>Roshan Reji</strong></li>
     </ul>
     """, unsafe_allow_html=True)
     st.markdown("""
