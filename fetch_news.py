@@ -114,7 +114,7 @@ def fetch_and_store_news():
                         collection.insert_one(article)
                         inserted_count += 1
                         # Notify Streamlit app of new article insertion
-                        st.experimental_rerun()  # Force a rerun to update the UI
+                        st.experimental_set_query_params(rerun="true")# Force a rerun to update the UI
                 st.write(f'Inserted {inserted_count} new articles with locations into MongoDB.')
             else:
                 st.write('No relevant articles found.')

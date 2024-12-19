@@ -14,45 +14,56 @@ disaster_types = ['All', 'Flood', 'Landslide', 'Earthquake', 'Tsunami', 'Wildfir
 precautions = {
     'Flood': {
         'text': "1. Avoid walking or driving through floodwater.\n2. Stay indoors and away from windows.\n3. Use sandbags to block water entry if possible.\n4. Keep important documents and valuables on higher floors.",
-        'image': 'https://ichef.bbci.co.uk/news/976/cpsprodpb/920A/production/_103068373_048715246-1.jpg'
+        'image': 'https://ichef.bbci.co.uk/news/976/cpsprodpb/920A/production/_103068373_048715246-1.jpg',
+        'video': 'https://www.youtube.com/embed/rV1iqRD9EKY'
     },
     'Landslide': {
         'text': "1. Avoid areas prone to landslides.\n2. Stay alert to weather forecasts and warnings.\n3. Evacuate if landslide activity is reported in your area.\n4. Secure your home and avoid placing structures on slopes.",
-        'image': 'https://img.manoramayearbook.in/content/dam/yearbook/learn/world/images/2024/may/landslide.jpg'
+        'image': 'https://img.manoramayearbook.in/content/dam/yearbook/learn/world/images/2024/may/landslide.jpg',
+        'video': 'https://www.youtube.com/embed/9j_StYqR_Pg'
     },
     'Earthquake': {
         'text': "1. Drop, Cover, and Hold On during shaking.\n2. Stay away from windows and heavy furniture.\n3. Have an emergency kit ready.\n4. Plan and practice earthquake drills with your family.",
-        'image': 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2024-01/240117-japan-earthquake-05-aa-1b5d87.jpg'
+        'image': 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2024-01/240117-japan-earthquake-05-aa-1b5d87.jpg',
+        'video': 'https://www.youtube.com/embed/r5EbbrVXoQw'
     },
     'Tsunami': {
         'text': "1. Move to higher ground immediately if you feel an earthquake.\n2. Follow evacuation orders and avoid going to the beach.\n3. Stay away from coastal areas during a tsunami warning.\n4. Have an emergency kit prepared and include a battery-powered radio.",
-        'image': 'https://www.optimumseismic.com/wp-content/uploads/2022/02/Earthquakes-and-Tsunamis-A-Double-Whammy-for-Coastal-Communities.jpg'
+        'image': 'https://www.optimumseismic.com/wp-content/uploads/2022/02/Earthquakes-and-Tsunamis-A-Double-Whammy-for-Coastal-Communities.jpg',
+        'video': 'https://www.youtube.com/embed/7EDflnGzjTY'
     },
     'Wildfire': {
         'text': "1. Create a defensible space around your home.\n2. Avoid using outdoor fires and smoking.\n3. Follow evacuation orders promptly.\n4. Have an emergency kit ready, including masks for smoke inhalation.",
-        'image': 'https://cdn.who.int/media/images/default-source/health-and-climate-change/fire-fighters-at-forest-fire-c-quarrie-photography.tmb-479v.jpg?sfvrsn=8b60f828_4%20479w'
+        'image': 'https://cdn.who.int/media/images/default-source/health-and-climate-change/fire-fighters-at-forest-fire-c-quarrie-photography.tmb-479v.jpg?sfvrsn=8b60f828_4%20479w',
+        'video': 'https://www.youtube.com/embed/ypbPzX5eQss'
     },
     'Hurricane': {
         'text': "1. Prepare an emergency kit with essential supplies.\n2. Follow evacuation orders and seek shelter in a safe location.\n3. Stay informed about weather updates and potential impact.\n4. Secure your home and protect windows and doors.",
-        'image': 'https://images.contentstack.io/v3/assets/blt0a0cb058815d4d96/blta962aadca1267515/6310fa17eb56af5839111e2e/Wind_and_Hurricane_Damage_to_Home.jpg?width=1440'
+        'image': 'https://images.contentstack.io/v3/assets/blt0a0cb058815d4d96/blta962aadca1267515/6310fa17eb56af5839111e2e/Wind_and_Hurricane_Damage_to_Home.jpg?width=1440',
+        'video': 'https://www.youtube.com/embed/TqZ3M7xh8jM'
     },
     'Cyclone': {
         'text': "1. Move to a safe location away from coastal areas.\n2. Follow local authorities' evacuation orders.\n3. Secure your home and bring in outdoor furniture.\n4. Have an emergency kit ready with food, water, and medical supplies.",
-        'image': 'https://static.toiimg.com/photo/100469199/100469199.jpg'
+        'image': 'https://static.toiimg.com/photo/100469199/100469199.jpg',
+        'video': 'https://www.youtube.com/embed/TqZ3M7xh8jM'
     },
     'Storm': {
         'text': "1. Stay indoors and avoid travel during severe storms.\n2. Secure windows and doors.\n3. Avoid using electrical appliances during storms.\n4. Have an emergency kit with flashlights and batteries.",
-        'image': 'https://thumbs.dreamstime.com/b/strom-columbus-ohio-united-states-usa-42170357.jpg'
+        'image': 'https://thumbs.dreamstime.com/b/strom-columbus-ohio-united-states-usa-42170357.jpg',
+        'video': 'https://www.youtube.com/embed/mUYqKvrFWd0'
     },
     'Drought': {
         'text': "1. Conserve water and use it efficiently.\n2. Support and follow local water restrictions.\n3. Maintain a garden with drought-resistant plants.\n4. Educate yourself on sustainable water practices.",
-        'image': 'https://earth.org/wp-content/uploads/2022/05/rsz_sujon_adikary_2-min-1200x675.jpg'
+        'image': 'https://earth.org/wp-content/uploads/2022/05/rsz_sujon_adikary_2-min-1200x675.jpg',
+        'video': 'https://www.youtube.com/embed/jni8YDoRP5o'
     },
     'Volcano': {
         'text': "1. Follow evacuation orders promptly.\n2. Protect yourself from ashfall with masks and goggles.\n3. Stay indoors and keep windows and doors closed.\n4. Prepare an emergency kit with essentials including masks for ash inhalation.",
-        'image': 'https://cdn.britannica.com/64/248964-138-C9CF1DD3/what-are-volcanoes-lava-flows.jpg?w=800&h=450&c=crop'
+        'image': 'https://cdn.britannica.com/64/248964-138-C9CF1DD3/what-are-volcanoes-lava-flows.jpg?w=800&h=450&c=crop',
+        'video': 'https://www.youtube.com/embed/UD35fHCQ95c'
     }
 }
+
 default_booking_form = {
     "name": "",
     "email": "",
@@ -219,6 +230,7 @@ elif page == "Precautions":
             st.write(f"**Precautions for {disaster_type}:**")
             st.write(precautions[disaster_type]['text'])
             st.image(precautions[disaster_type]['image'])
+            st.markdown(f"<iframe width='560' height='315' src='{precautions[disaster_type]['video']}' frameborder='0' allowfullscreen></iframe>", unsafe_allow_html=True)
         else:
             st.write("No precautions available for the selected disaster type.")
 elif page == "Book A Training":
